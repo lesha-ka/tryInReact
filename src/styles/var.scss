@@ -1,0 +1,24 @@
+// media
+$desktop: 'screen and (min-width: 1024px)'; 
+$tablet: 'screen and (min-width: 481px)';
+
+//colors
+$white: #ffffff;
+$black: #000000;
+$gray-l: #999999;
+$gray: #7E7E7E;
+$gray-d: #666666;
+$gray-line: #E5E4E4;
+$green: #71C838;
+$error: #FF0000;
+$red: #F52020;
+
+
+//z-index
+$ui-index-1: 1; // для элементов наползающих друг на друга
+$ui-index-2: 2; // для элементов наползающих друг на друга
+$ui-index-3: 3; // для элементов наползающих друг на друга
+$ui-index-4: 4; // затемнения
+$ui-index-5: 5; // сайдбары
+$ui-index-6: 6; // модальные окна
+$ui-index-10: 10; // элементы перекрывающие все

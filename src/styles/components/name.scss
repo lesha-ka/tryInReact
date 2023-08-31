@@ -1,0 +1,15 @@
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    color: $gray-d;
+    @media #{$tablet} {
+        font-size: 28px;
+    }
+    @media #{$desktop} {
+        font-size: 30px;
+    }
+    & span {
+        font-weight: inherit;
+        color: $black;
+    }
+}

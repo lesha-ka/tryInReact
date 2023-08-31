@@ -1,0 +1,98 @@
+.input {
+    &__wrapper {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 200px;
+        position: relative;
+        @media #{$tablet} {
+            max-width: 560px;
+            grid-template-columns: 1fr 255px;
+        }
+        @media #{$desktop} {
+            grid-template-columns: 1fr 335px;
+        }
+        &:not(:first-child) {
+            margin-top: 20px;
+            @media #{$tablet} {
+                margin-top: 30px;
+            }
+            @media #{$desktop} {
+                margin-top: 40px;
+            }
+        }
+    }
+    &__name {
+        font-size: 16px;
+        padding-right: 20px;
+        @media #{$desktop} {
+            font-size: 21px;
+        }
+        & sup {
+            color: $red;
+            font-size: inherit;
+        }
+    }
+    &__field {
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: $black;
+        border-radius: 0;
+        border: 1px solid $gray-l;
+        max-width: 335px;
+        @media #{$desktop} {
+            font-size: 16px;
+        }
+        &::placeholder {
+            color: $gray;
+        }
+    }
+    &__error {
+        position: absolute;
+        bottom: -20px;
+        left: calc(100% - 200px);
+        color: $error;
+        font-size: 12px;
+        line-height: 20px;
+        @media #{$tablet} {
+            left: calc(100% - 255px);
+        }
+        @media #{$desktop} {
+            bottom: -24px;
+            left: 225px;
+        }
+    }
+    &__select {
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        max-width: 335px;
+    }
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        & + label {
+            padding-left: 22px;
+            font-size: 14px;
+            line-height: 1;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: calc(50% - 6px);
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                border: 1px solid $gray;
+            }
+            @media #{$desktop} {
+                font-size: 16px;
+            }
+        }
+        &:checked + label::before {
+            background-color: #000;
+        }
+    }
+}

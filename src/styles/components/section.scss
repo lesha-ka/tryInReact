@@ -1,0 +1,11 @@
+.section {
+    padding: 30px 16px;
+    max-width: 1169px;
+    margin: 0 auto;
+    @media #{$tablet} {
+        padding: 40px;
+    }
+    @media #{$desktop} {
+        padding: 90px 80px 125px 100px;
+    }
+}

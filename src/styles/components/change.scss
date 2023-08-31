@@ -1,0 +1,40 @@
+.change {
+    margin-top: 15px;
+    text-align: center;
+    @media #{$tablet} {
+        margin-top: 0;
+        text-align: left;
+    }
+    @media #{$desktop} {
+        padding-left: 225px;
+    }
+    &__btn {
+        color: $white;
+        border: 0;
+        outline: 0;
+        background-color: $green;
+        box-shadow: 0px 1px 0px 0px #539D22;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 18px;
+        font-size: 18px;
+        line-height: 20px;
+        cursor: pointer;
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+    &__time {
+        font-size: 12px;
+        color: $gray-l;
+        display: block;
+        text-align: center;
+        margin-top: 12px;
+        @media #{$tablet} {
+            display: inline-block;
+            margin-left: 12px;
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+}
